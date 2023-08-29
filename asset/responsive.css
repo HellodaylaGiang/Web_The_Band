@@ -1,0 +1,37 @@
+/* Mobile & Tablet */
+@media (max-width:1024x) {
+   
+}
+
+/*  Mobile*/
+@media(max-width:740px) {
+    #content .member-list {
+        flex-direction: column;
+    }
+    #nav > li {
+        display: block;
+        width: 100%;
+    }
+    #header{
+        height: auto;
+    }
+    .search-btn{
+        display: none;
+    }
+    .search-btn-mobile{
+        display: block;
+    }
+    #slider{
+        margin-top: 230px;
+    }
+    #giang{
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+
+/* Tablet */
+@media(min-width:741px) and (max-width:1023px) {
+  
+}

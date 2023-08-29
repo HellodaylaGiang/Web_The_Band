@@ -1,0 +1,598 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main {}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+#header {
+    position: fixed;
+    height: 46px;
+    background-color: black;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav>li {
+    display: inline-block;
+
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#header .search-btn:hover .modal {
+    display: flex;
+}
+
+#nav>li:hover>a,
+#nav .subnav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+
+.search-btn-mobile,
+#header .search-btn {
+    float: right;
+    padding: 0 20px;
+}
+
+.search-btn-mobile{
+    display: none;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/asset/img2/juneissue-korea-elle-rose-blackpink.jpeg') top center / contain no-repeat;
+    background-color: #00ffff29;
+    transition: padding-top .3s;
+}
+
+#slider:hover{
+    cursor: pointer;
+    padding-top: 60%;
+}
+
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    text-align: center;
+    width: 100%;
+    line-height: 25px;
+}
+
+#slider .text-heading {}
+
+#slider .tetx-description {}
+
+
+#content {
+    background-color: antiquewhite;
+}
+
+#content .content-section {
+    width: 100%;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+    padding: 0 40px;
+}
+
+#content .section-heading:hover {
+    cursor: pointer;
+    animation: send2 .5s;
+}
+
+.content-section .about-text:hover {
+    color: #eb183b;
+    cursor: pointer;
+}
+
+@keyframes send2{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+#content .member-list {
+    margin-top: 48px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+}
+
+#content .member-item {
+    float: left;
+    text-align: center;
+    
+}
+
+#content .member-item:hover {
+    cursor: pointer;
+    animation: text1 cubic-bezier(0.175, 0.885, 0.92, 2.275) .8s;
+}
+
+
+    @keyframes text1{
+        from{
+            transform: translateY(0);
+    }
+    to{
+        transform: translateY(-70px);
+        
+    }
+}
+
+#content .member-name {
+    font-size: 25px;
+    color: #ff00b1;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    width: 200px;
+    border-radius: 9px;
+}
+
+/* Tour section */
+
+.tour-section {
+    background-color: #000;
+}
+
+.ticket-list {
+    margin-top: 40px;
+}
+
+.ticket-list li {
+    list-style-type: none;
+    color: #877fff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: solid 2px #ff00b1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.ticket-list .sold-out {
+    background-color: #7fdcff;
+    padding: 5px 6px;
+    color: #000;
+}
+
+
+.ticket-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #ff00f330;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+/* Place */
+
+.place-list {
+    margin-top: 32px;
+    margin-left: 70px;
+    padding-bottom: 48px;
+    position: relative;
+    animation: x1 infinite  2.3s;
+    animation-direction:alternate ;
+}
+
+.place-item {
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+@keyframes x1 {
+    0%{background-color:black; left:0px; top:0px;}
+    /* 25%  {background-color:; left:200px; top:0px;} */
+    50%{background-color:black; left:0px; top:70px;}
+    75%{background-color:rgb(89, 89, 96); left:0px; top:0px;}
+    100%{background-color:rgb(85, 85, 88); left:0px; top:0px;}
+}
+
+
+@keyframes x {
+    form{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+.place-img {
+    width: 80%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.place-body {
+    border: solid 2px yellow;
+    padding: 16px;
+    background-color: #ccc;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+}
+
+.place-desc {
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 3px 7px;
+}
+
+.place-buy-btn:hover {
+    background-color: #ff00f35c;
+    color: #000;
+    cursor: pointer;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00ffff3d;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container {
+    background-color: #d300ff4a;
+    width: 900px;
+    min-height: 200px;
+    animation: modalFadeIn cubic-bezier(0.175, 0.885, 0.32, 2.275) .9s;
+}
+
+.modal-header {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px;
+    font-size: 30px;
+}
+
+.ti-bag {
+    margin-left: 10px;
+}
+
+.modal-close {
+    position: relative;
+}
+
+.ti-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.ti-close:hover {
+    background-color: #00ffffad;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: grid;
+}
+
+.modal-body .modal-input {
+    padding: 10px;
+}
+
+.modal-label {
+    padding: 10px 10px;
+}
+
+#buy-tickets {
+    height: 40px;
+    font-size: 20px;
+}
+
+.modal-footer {
+    width: 20px;
+    text-align: right;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-300px);
+
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+.contact-total {
+    /* position: relative; */
+    flex-direction: row-reverse;
+}
+
+.contact-total1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 0;
+}
+
+.send {
+    text-align: center;
+    border: none;
+    transition: width 0.8s;
+}
+
+.send1{
+    padding: 10px;
+    outline: none;
+    background-color: #7fdcff;
+    transition: width 0.8s;
+    width: 100px;
+}
+
+.send:hover .send1{
+    cursor: pointer;
+    width: 1000px;
+    background-color: #dfd028;
+}
+
+.contact1 .text{
+    padding: 2px;
+}
+
+.contact1 .contact1-s input{
+    margin-top: 5px;
+    width: 100%;
+}
+
+.contact p{
+    padding: 2px;
+}
+
+.contact i{
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.map{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 65vh;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.slide-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #628797c9;
+}
+
+.image-slider{
+    width: 0;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+}
+
+.slide-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+
+.img{
+    position: relative;
+    width: 240px;
+    height: 370px;
+    transition: .5s;
+    filter: saturate(10%);
+}
+
+.button{
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~ .image-slider #button-1{
+    width: 300px;
+    height: 430px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span2:target ~ .image-slider #img2,
+#slider-span2:target ~ .image-slider #button-2{
+    width: 300px;
+    height: 430px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~ .image-slider #button-3{
+    width: 300px;
+    height: 430px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+/* image position */
+#slider-span1:target ~ .image-slider { left: 70%;}
+#slider-span2:target ~ .image-slider { left: 50%;}
+#slider-span3:target ~ .image-slider { left: 25%;}
+
+
+#footer{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-list a i{
+    font-size: 25px;
+    padding: 0 10px;
+    transition: font-size .3s;
+}
+
+.social-list a:hover i{
+    font-size: 45px;
+}
+
+.topic{
+    margin-top: 25px;
+}
+
